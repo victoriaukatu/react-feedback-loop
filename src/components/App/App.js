@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import { connect } from 'react-redux';
+import Feeling from './../Feeling/Feeling';
+
 
 class App extends Component {
   render() {
@@ -10,10 +13,15 @@ class App extends Component {
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
         </header>
+        <Feeling />
         <br/>
       </div>
     );
   }
 }
 
-export default App;
+const mapReduxStateToProps = (reduxState) => ({
+  reduxState
+});
+
+export default connect(mapReduxStateToProps)(App);
