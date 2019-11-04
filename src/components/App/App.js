@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Home from '../Home/Home';
+import Comments from '../Comments/Comments';
+import Success from '../Success/Success';
+import Review from '../Review/Review';
 
 
 
@@ -23,10 +26,14 @@ class App extends Component {
         <br />
       </div>
       <div>
+      {/* The routes define the paths which allow for navigation between pages */}
       <Route exact path="/" component={Home}/>
       <Route path="/feeling" component={Feeling}/>
       <Route path="/understanding" component={Understanding}/>
       <Route path="/supported" component={Supported}/>
+      <Route path="/comments" component={Comments}/>
+      <Route path="/success" component={Success}/>
+      <Route path="/review" component={Review}/>
       </div>
       </Router>
       </>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Link } from 'react-router-dom';
 
 class Feeling extends Component {
 
@@ -33,7 +33,9 @@ class Feeling extends Component {
           <option value={4}>4</option>
           <option value={5}>5</option>
         </select>
-        <button>Next</button>
+        <button>
+          <Link to="/understanding">Next</Link>
+        </button>
       </div>
     );
   }

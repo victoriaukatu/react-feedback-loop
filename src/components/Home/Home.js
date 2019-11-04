@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { HashRouter as Link } from 'react-router-dom';
 
 class Home extends Component {
   render() {
@@ -10,7 +11,10 @@ class Home extends Component {
       </div>
       <br />
       <div className="Home">
-        <button>Begin Feedback</button>
+        {/* This button leads user to first page of feedback */}
+        <button>
+            <Link to="/feeling">Begin Feedback</Link>
+        </button>
       </div>
       </>
     );

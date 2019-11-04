@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { HashRouter as Link } from 'react-router-dom';
 
 class Understanding extends Component {
   render() {
@@ -13,7 +14,9 @@ class Understanding extends Component {
             <option>4</option>
             <option>5</option>
         </select>
-        <button>Next</button>
+        <button>
+          <Link to="/supported">Next</Link>
+        </button>
       </div>
     );
   }
