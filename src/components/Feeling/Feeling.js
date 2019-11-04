@@ -13,9 +13,10 @@ class Feeling extends Component {
       feeling: event.target.value
     })
     console.log('A feeling was selected');
-    console.log('before function', this.state.feeling)
-    console.log(this.state);
-    // this.props.dispatch({type: 'SET_FEELING' , payload: this.state.feeling})
+  }
+
+  handleButtonClick = () => {
+    this.props.dispatch({type: 'SET_FEELING', payload: this.state.feeling})
   }
 
   render() {
@@ -24,16 +25,16 @@ class Feeling extends Component {
         <h2>How are you feeling today?</h2>
         {/* <input placeholder="feeling" value={this.state.feeling}></input> */}
         <select 
-        value={this.state}
+        value={this.state.feeling}
         onChange={this.handleFeelingChoice}>
           <option value=""></option>
-          <option value={1}>1</option>
-          <option value={2}>2</option>
-          <option value={3}>3</option>
-          <option value={4}>4</option>
-          <option value={5}>5</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
         </select>
-        <button>
+        <button onClick={this.handleButtonClick}>
           <Link to="/understanding">Next</Link>
         </button>
       </div>
